@@ -2,11 +2,11 @@ import { useState } from "react";
 import { ethers } from "ethers";
 import { Row, Form, Button } from "react-bootstrap";
 import { Buffer } from "buffer";
+import { PROJECT_ID, PROJECT_SECRET } from "../../contant";
 const ipfsClient = require("ipfs-http-client");
-const projectId = "2DRajvCcXp7w3QETxz4LCAarFYX";
-const projectSecret = "2d52e7cf405b581e1bc2d3c2c6d55046";
+
 const auth =
-  "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
+  "Basic " + Buffer.from(PROJECT_ID + ":" + PROJECT_SECRET).toString("base64");
 const client = ipfsClient.create({
   host: "ipfs.infura.io",
   port: 5001,
